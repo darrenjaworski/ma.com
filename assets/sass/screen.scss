@@ -1,0 +1,370 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "compass/css3";
+@import "compass/reset";
+@import "compass/typography/links";
+
+/*Start SUSY Grid */
+@import "susy";
+$total-columns 	:	12;
+$column-width	:	3em;
+$gutter-width	:	1.5em;
+$grid-padding	:	1em; 
+/* End SUSY Grid */
+
+@import "partials/normalize"; 
+@import "partials/utilities"; 
+@import "partials/layout";
+@import "partials/navigation"; 
+
+
+$bluecontrast	:	#304959;
+$sectionaccent	:	#FDFFFE;
+$footerandwork	:	#0F2D40;
+$gray			:	#ede8df;
+
+@font-face	{
+	font-family: icomoon;
+	src: url('../fonts/icomoon.tff'),
+		url('../fonts/icomoon.eot'),
+		url('../fonts/icomoon.woff'),
+		url('../fonts/icomoon.svg');
+}
+
+html	{
+	font-family: 'Helvetica';
+}
+
+p	{
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	line-height: 1.2em;
+}
+
+section	{
+	min-height: 20em;
+	position: relative;
+	top: 3em;
+	&:nth-child(2n)	{
+		background-color: $sectionaccent;
+	}
+}
+
+ul	{
+	padding-left: 0;
+}
+
+.socialnav	{
+	font-size: 1.5em;
+	position: relative;
+	top: -.5em;
+}
+
+nav	{
+	position: fixed;
+	z-index: 100;
+	opacity: .99;
+	height: 3em;
+	background-color: white;
+	@include span-columns(12,12);
+	.sitenav	{
+		@include span-columns(4 omega,12);
+		text-align: right;
+		li {
+			display: inline;
+			padding-left: 1em;
+			margin: auto;
+		}
+	}
+	.socialnav	{
+		font-family: icomoon;
+		
+		@include span-columns(8,12);
+		li {
+			display: inline;
+			color: $footerandwork;
+		}
+	}
+}
+
+#homepageimage	{
+	img	{
+		@include span-columns(12,12);
+		margin-bottom: 5em;
+	}
+}
+
+.container	{
+	@include container;
+}
+
+.subheading	{
+	text-align: center;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	padding-bottom: 1em;
+	font-size: 2em;
+}
+
+#about	{
+	padding: 3em 0em;
+	article	{
+		@include span-columns(8,12);
+		p {
+			padding-bottom: 1em;
+			text-indent: 2em;
+		}
+	}
+	#trek	{
+		@include span-columns(4 omega, 12);
+		margin-top: 3em;
+		ul	{
+			li {
+				padding-left: 1em;
+			}
+		}
+	}
+	#globe	{
+		svg	{
+			@include border-radius(10%);
+		}
+		clear: both;
+		@include span-columns(12,12);
+		.stroke {
+		  fill: none;
+		  stroke: #000;
+		  stroke-width: 3px;
+		}
+		
+		.graticule {
+		  fill: none;
+		  stroke: #0F2D40;
+		  stroke-width: .5px;
+		  stroke-opacity: .5;
+		}
+		
+		.fill {
+		  fill: #fff;
+		}
+		.land {
+		  fill: $footerandwork;
+		}
+		
+		.boundary {
+		  fill: none;
+		  stroke: #fff;
+		  stroke-width: 1px;
+		}
+		.stroke {
+		  fill: none;
+		  stroke: #000;
+		  stroke-width: 3px;
+		}
+		
+		.fill {
+		  fill: #fff;
+		}
+	}
+}
+
+#work	{
+	padding: 3em 0em;
+	li {
+		padding-bottom: .5em;
+	}
+	h2	{
+		text-align: center;
+	}
+	a {
+		@include link-colors($gray, $gray, $gray, $gray, $gray)
+	}
+	.workbox	{
+		@include span-columns(5,12);
+		@include box-shadow(black 0px 0px 15px);
+		@include border-radius(1em);
+		color: $gray;
+		padding: 1em;	
+		margin-bottom: 3em;
+		background-color: $footerandwork;
+		&:nth-child(2n)	{
+			clear: both;
+			@include omega;
+		}
+	}
+	#work4	{
+		max-height: 20em;
+		 > button {
+			@include appearance(none);
+			background-color: transparent;
+			border: none;
+			color: $gray;
+		}
+		#socialmedia	{
+			max-height: 13em;
+			overflow: scroll;
+			background-color: $bluecontrast;
+			@include border-radius(1em);
+			> li {
+				padding-left: .2em;
+				padding-right: .2em;
+				> p	{
+					font-size: .5em;
+				}
+				&:last-child	{
+					padding-bottom: .2em;
+				}
+			}
+			padding: .4em;
+		}
+	}
+}
+
+#madibio	{
+	#biopic	{
+		img {
+			@include span-columns(10,12);
+			@include squish(1,1);
+			padding-bottom: 3em;
+		}
+		padding-top: 3em;
+	}
+	p	{
+		padding-bottom: 1em;
+		text-indent: 2em;
+	}
+	article	{
+		padding-bottom: 3em;
+	}
+}
+
+a	{
+	@include link-colors(black, black, black, black, $gray);
+	text-decoration: none;
+}
+.main	{
+	.gallery 	{
+		@include span-columns(12,12);
+		margin-top: 3em;
+		@include clearfix;
+	}
+	h2	{
+		@include span-columns(12,12);
+		font-size: 2em;	
+		@include clearfix;
+		-webkit-margin-before: 0.5em;
+		-webkit-margin-after: 0.5em;
+	}
+	p	{
+		@include span-columns(12,12);
+		@include clearfix;
+		/*
+top: -2em;
+		position: relative;
+*/
+	}
+	h1	{
+		@include span-columns(12,12);
+		@include clearfix;
+		font-size: 5em;
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 3em;
+	}
+	#frontpagetext	{
+		 text-align: center; 
+		 line-height: 1.5em;
+	}
+}
+
+footer	{
+	color: $gray;
+	min-height: 10em;
+	position: relative;
+	top: 3em;
+	background-color: $footerandwork;
+	#footerleft	{
+		@include span-columns(6,12);
+	}
+	#footerright	{
+		@include omega;
+		font-family: icomoon;
+	}
+	.socialnav	{
+		top: -1.75em;
+	}
+	ul	{
+		padding-top: 5em;
+		li {
+			display: inline;
+			padding-right: .5em;
+		}
+		margin: 0;
+	}
+	a {
+		@include link-colors($gray, $gray, $gray, $gray, $gray)
+	}
+}
+
+@media (max-width: 860px)	{
+	#about	{
+		article	{
+			@include span-columns(12,12);
+		}
+		#trek	{
+			@include span-columns(12,12);
+			@include remove-omega;
+		}
+	}
+	nav	{
+		.sitenav	{
+			@include span-columns(7,12);
+			@include omega;
+		}
+		.socialnav	{
+			@include span-columns(5,12);
+		}
+	}
+}
+
+@media (max-width: 732px)	{
+	#socialmedia	{					
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+	#work	{
+		.workbox	{
+			@include span-columns(12,12);
+			padding: 0;
+			&:nth-child(2n)	{
+				clear: none;
+				@include remove-omega;
+			}
+			ul	{
+				li {
+					padding: 0em 1em .5em 1em; 
+				}
+			}
+			#work4	{
+				
+			}
+		}
+	}
+	nav	{
+		font-size: .8em;
+	}
+	.main	{
+		h1	{
+			font-size: 3em;
+		}
+		#frontpagetext	{
+			font-size: 1em;
+		}
+	}
+	h2, p	{
+		position: relative;
+		top: -1em;
+	}
+}
+
