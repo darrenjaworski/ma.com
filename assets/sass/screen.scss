@@ -56,6 +56,10 @@ ul	{
 	padding-left: 0;
 }
 
+h2	{
+	 margin: .5em 0;
+}
+
 .socialnav	{
 	font-size: 1.5em;
 	position: relative;
@@ -194,7 +198,6 @@ nav	{
 		}
 	}
 	#work4	{
-		max-height: 20em;
 		 > button {
 			@include appearance(none);
 			background-color: transparent;
@@ -337,6 +340,9 @@ footer	{
 		.workbox	{
 			@include span-columns(12,12);
 			padding: 0;
+			h2	{
+				padding-top: 2em;
+			}
 			&:nth-child(2n)	{
 				clear: none;
 				@include remove-omega;
