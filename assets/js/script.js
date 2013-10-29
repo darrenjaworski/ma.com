@@ -60,8 +60,10 @@ $(document).ready( function() {
 		var graticule = d3.geo.graticule();
 		
 		var svg = d3.select("#globe").append("svg")
-		    .attr("width", width)
-		    .attr("height", height);
+		    .style("width", width + "px")
+		    .style("height", height + "px");
+		    
+		d3.select(window).on('resize', resize);
 		
 		svg.append("path")
 		    .datum(graticule)
@@ -93,6 +95,26 @@ $(document).ready( function() {
 		});
 		
 		d3.select(self.frameElement).style("height", height + "px");
+		
+		
+
+		function resize() {
+		    width = parseInt(d3.select('#globe').style('width'));
+		    height = width * .604;
+		
+		    projection
+		        .translate([width / 2, height / 2])
+		        .scale(width * .177);
+		
+		    svg
+		        .style('width', width + 'px')
+		        .style('height', height + 'px');
+		
+		    svg.selectAll('.graticule').attr('d', path);
+		    svg.selectAll('.country').attr('d', path);
+		    svg.selectAll('.boundary').attr('d', path);
+		}
+		
 	}
 
 	if ( $(".main").length > 0 ) {
