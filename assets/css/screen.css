@@ -936,7 +936,12 @@ footer a:active {
     margin-right: 1em;
   }
 
-  /* line 340, ../sass/screen.scss */
+  /* line 344, ../sass/screen.scss */
+  #footerleft ul li {
+    display: block;
+  }
+
+  /* line 350, ../sass/screen.scss */
   #work .workbox {
     width: 100%;
     float: left;
@@ -944,39 +949,47 @@ footer a:active {
     display: inline;
     padding: 0;
   }
-  /* line 343, ../sass/screen.scss */
+  /* line 353, ../sass/screen.scss */
   #work .workbox h2 {
     padding-top: 2em;
   }
-  /* line 346, ../sass/screen.scss */
+  /* line 356, ../sass/screen.scss */
   #work .workbox:nth-child(2n) {
     clear: none;
     float: left;
     margin-right: 2.85714%;
     *margin-left: auto;
   }
-  /* line 351, ../sass/screen.scss */
+  /* line 361, ../sass/screen.scss */
   #work .workbox ul li {
     padding: 0em 1em .5em 1em;
   }
 
-  /* line 360, ../sass/screen.scss */
+  /* line 370, ../sass/screen.scss */
   nav {
     font-size: .8em;
   }
 
-  /* line 364, ../sass/screen.scss */
+  /* line 374, ../sass/screen.scss */
+  .main .gallery {
+    width: 82.85714%;
+    float: left;
+    margin-right: 2.85714%;
+    display: inline;
+    margin-left: 8.57143%;
+    margin-right: 8.57143%;
+  }
+  /* line 378, ../sass/screen.scss */
   .main h1 {
     font-size: 3em;
   }
-  /* line 367, ../sass/screen.scss */
+  /* line 381, ../sass/screen.scss */
   .main #frontpagetext {
     font-size: 1em;
   }
 
-  /* line 371, ../sass/screen.scss */
+  /* line 385, ../sass/screen.scss */
   h2, p {
     position: relative;
-    top: -1em;
   }
 }

@@ -335,6 +335,16 @@ footer	{
 	#socialmedia	{					
 		margin-left: 1em;
 		margin-right: 1em;
+		p	{
+			//margin-top: 1em;
+		} 
+	}
+	#footerleft	{
+		ul	{
+			li {
+				display: block;
+			} 
+		}
 	}
 	#work	{
 		.workbox	{
@@ -361,6 +371,10 @@ footer	{
 		font-size: .8em;
 	}
 	.main	{
+		.gallery	{
+			@include span-columns(10,12);
+			@include squish(1,1);
+		}
 		h1	{
 			font-size: 3em;
 		}
@@ -370,7 +384,7 @@ footer	{
 	}
 	h2, p	{
 		position: relative;
-		top: -1em;
+		//top: -1em;
 	}
 }
 
