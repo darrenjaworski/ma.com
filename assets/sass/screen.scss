@@ -24,6 +24,7 @@ $bluecontrast	:	#304959;
 $sectionaccent	:	#FDFFFE;
 $footerandwork	:	#0F2D40;
 $gray			:	#ede8df;
+$yellowvisited	:	#CFB705;
 
 @font-face	{
 	font-family: icomoon;
@@ -126,6 +127,7 @@ nav	{
 		margin-top: 3em;
 		ul	{
 			li {
+				color: $yellowvisited;
 				padding-left: 1em;
 			}
 		}
@@ -154,6 +156,12 @@ nav	{
 		}
 		.land {
 		  fill: $footerandwork;
+		}
+		.america	{
+			fill: black;
+		}
+		.visited	{
+			fill: $yellowvisited;
 		}
 		
 		.boundary {
@@ -262,10 +270,6 @@ a	{
 	p	{
 		@include span-columns(12,12);
 		@include clearfix;
-		/*
-top: -2em;
-		position: relative;
-*/
 	}
 	h1	{
 		@include span-columns(12,12);
@@ -335,9 +339,6 @@ footer	{
 	#socialmedia	{					
 		margin-left: 1em;
 		margin-right: 1em;
-		p	{
-			//margin-top: 1em;
-		} 
 	}
 	#footerleft	{
 		ul	{
@@ -351,7 +352,7 @@ footer	{
 			@include span-columns(12,12);
 			padding: 0;
 			h2	{
-				padding-top: 2em;
+				padding: .5em;
 			}
 			&:nth-child(2n)	{
 				clear: none;
@@ -372,19 +373,19 @@ footer	{
 	}
 	.main	{
 		.gallery	{
-			@include span-columns(10,12);
-			@include squish(1,1);
+			@include span-columns(12,12);
 		}
 		h1	{
-			font-size: 3em;
+			font-size: 2em;
 		}
 		#frontpagetext	{
-			font-size: 1em;
+			display: block;
+			font-size: .8em;
+		}
+		h2, p	{
+			display: none;
 		}
 	}
-	h2, p	{
-		position: relative;
-		//top: -1em;
-	}
+	
 }
 
