@@ -47,8 +47,6 @@ $(document).ready( function() {
 	
 		var height = width * .604;
 		
-		var color = d3.scale.category10();
-		
 		var projection = d3.geo.kavrayskiy7()
 		    .scale(width * .177)
 		    .translate([width / 2, height / 2])
@@ -78,13 +76,13 @@ $(document).ready( function() {
 		    .enter().insert("path", ".graticule")
 		      .attr("class", "country")
 		      .attr("d", path)
-		      .style("fill", function(d){
+		      .attr("class", function(d){
 			      if(  d.id == '388' || d.id == '124' || d.id == '634' || d.id == '784' || d.id == '792' || d.id == '724' || d.id == '620' ){
-				      return "#CFB705";
+				      return "visited";
 			      } else if ( d.id == '840' ){
-				      return "#000"
+				      return "america"
 			      } else {
-				      return "#304959";
+				      return "land";
 			      }
 		      });
 		
@@ -109,10 +107,8 @@ $(document).ready( function() {
 		    svg
 		        .style('width', width + 'px')
 		        .style('height', height + 'px');
-		
-		    svg.selectAll('.graticule').attr('d', path);
-		    svg.selectAll('.country').attr('d', path);
-		    svg.selectAll('.boundary').attr('d', path);
+			
+			svg.selectAll('path').attr('d', path);
 		}
 		
 	}
