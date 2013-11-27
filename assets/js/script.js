@@ -61,7 +61,7 @@ $(document).ready( function() {
 		    .style("width", width + "px")
 		    .style("height", height + "px");
 		    
-		d3.select(window).on('resize', resize);
+		$(window).on('resize', resize);
 		
 		svg.append("path")
 		    .datum(graticule)
@@ -92,7 +92,7 @@ $(document).ready( function() {
 		      .attr("d", path);
 		});
 		
-		d3.select(self.frameElement).style("height", height + "px");
+		//d3.select(self.frameElement).style("height", height + "px");
 		
 		
 
