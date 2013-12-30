@@ -13,7 +13,15 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 
 	<link rel="stylesheet" href="assets/css/screen.css">
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="assets/js/lib/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="assets/js/plugins.js"></script>
+	<script src="assets/js/script.js"></script>
 	<script src="assets/js/lib/modernizr-2.6.2.min.js"></script>
+	<script src="assets/js/lib/jquery.isotope.min.js"></script>
 	<script src="assets/js/lib/html5shiv.js"></script>
 </head>
 <body>
@@ -85,7 +93,7 @@
 			
 			<article>
 				<p>Hello! I’m Madi Alexander. I am a political science and mass communications senior at Oklahoma City University. My emphases are in public relations and international affairs with a minor in Spanish.</p>
-				<p>Currently I am the online editing intern at <a href="http://newsok.com">The Oklahoman</a>. I work with the digital desk to manage the NewsOK website, social media presence and other digital products for The Oklahoman.</p>
+				<p>Currently I am the online editing intern at <a href="http://newsok.com">The Oklahoman</a>. I work with the multimedia desk to manage the NewsOK website, social media presence and other multimedia products for The Oklahoman.</p>
 				<p>I was a member of OCU’s student media for four semesters, working as the web editor and graphic designer. During the 2013 legislative session, I covered the Oklahoma legislature as an intern for The Journal Record Legislative Report.</p>
 				<p>This summer I briefly worked for CNN after the Moore tornado as a production assistant for several shows, including AC360 and The Situation Room. Thanks to a grant from the Oklahoma Newspaper Foundation, I spent the remainder of the summer as an intern at the Shawnee News-Star, covering everything from rodeos to rainfall to tractor pulls.</p>
 			</article>
@@ -115,174 +123,30 @@
 		<div class="container">
 		
 			<h2 class="subheading">Work</h2>
-		
-			<div class="workbox" id="work1">
 			
-				<h2>Media OCU</h2>
-		
-				<ul>
-					<li>
-						<a href="http://mediaocu.com/2013/09/09/students-professors-share-opinions-syria/" target="_blank">Students, professors share opinions on Syria</a>
-					</li>
-					<li>
-						<a href="http://mediaocu.com/2013/02/13/administrators-uphold-student-code-of-conduct-in-response-to-gun-control-laws/" target="_blank">Administrators uphold student code of conduct in response to gun control laws</a>
-					</li>
-					<li>
-						<a href="http://mediaocu.com/2013/04/24/university-police-violate-federal-campus-safety-law/" target="_blank">University police violate federal campus safety law</a>
-					</li>
-					<li>
-						<a href="http://mediaocu.com/2013/04/24/university-officials-refuse-prompt-release-of-crime-logs/" target="_blank">University officials refuse prompt release of crime logs</a>
-					</li>
-					<li>
-						<a href="http://mediaocu.com/2013/04/24/university-officials-fail-to-release-annual-crime-statistics/" target="_blank">University officials fail to release annual crime statistics</a>
-					</li>
-					<li>
-						<a href="http://mediaocu.com/2013/04/10/fines-increased-for-parking-violations-new-penalties-added-to-tickets/" target="_blank">Fine increased for parking violations, new penalties added to tickets</a>
-					</li>
-					<li>
-						<a href="http://mediaocu.com/2012/09/23/freshman-student-detained-during-lockdown/" target="_blank">Freshman student detained during lockdown</a>
-					</li>
-					<li>
-						<a href="http://mediaocu.com/2013/03/13/sga-presidential-candidate-disqualified-from-race/" target="_blank">SGA presidential candidate disqualified from race</a>
-					</li>
-				</ul>
+			<ul id="filteroptions">
+				<li><a href="#" data-filter="*">all</a></li>
+				<li class="printbutton"><a href="#" data-filter=".print">print</a></li>
+				<li class="multimediabutton"><a href="#" data-filter=".multimedia">multimedia</a></li>
+				<li class="prbutton"><a href="#" data-filter=".pr">pr</a></li>
+			</ul>
+			
+			<div id="isotopecontainer">
 				
-			</div>
-			
-			<div class="workbox" id="work2">
-			
-				<h2>Shawnee News-Star</h2>
-			
-				<ul>
-					<li>
-						<a href="http://www.news-star.com/article/20130702/NEWS/130709937/1001/">Lack of fluoride in drinking water causes health concerns</a>
-					</li>
-					<li>
-						<a href="http://www.news-star.com/article/20130624/NEWS/130629884">Public schools pressured to install safe rooms</a>
-					</li>
-				</ul>
-			
-			</div>
-			
-			<div class="workbox" id="work3">
-			
-				<h2>Strategic Campaigns</h2>
-		
-				<ul>
-					<li>Coming soon...</li>
-					<!--
-<li>
-						<a href="http://mediaocu.com/2013/04/24/university-police-violate-federal-campus-safety-law/">Police Violate Federal Law</a>
-					</li>
-					<li>
-						<a href="http://mediaocu.com/2013/04/24/university-officials-refuse-prompt-release-of-crime-logs/">Officials Refuse Prompt Release of Crime Logs</a>
-					</li>
-					<li>
-						<a href="http://mediaocu.com/2013/04/24/university-officials-fail-to-release-annual-crime-statistics/">Officials Fail to Release Crime Statistics</a>
-					</li>
-					<li>
-						<a href="http://mediaocu.com/2013/04/10/fines-increased-for-parking-violations-new-penalties-added-to-tickets/">Fine Increased for Parking Violations</a>
-					</li>
-					<li>
-						<a href="http://mediaocu.com/2012/09/23/freshman-student-detained-during-lockdown/">Freshman Student Detained</a>
-					</li>
-					<li>
-						<a href="http://mediaocu.com/2013/03/13/sga-presidential-candidate-disqualified-from-race/">SGA Presidential Candidate Disqualified</a>
-					</li>
--->
-				</ul>
-				
-			</div>
-			
-			<div class="workbox" id="work4">
-			
-				<h2>Social Media Management</h2>
-				
-				<button>@MediaOCU</button> 
-				
-				<!-- <button>@NewsOK</button> -->
-		
-				<!-- social media slot one -->
-				<ul id="socialmedia">
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311676169198112768">BREAKING: Campus is on lockdown, according to OCUPD. Seek safety indoors.</a>
-						<p>16 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311677146642931712">BREAKING: Shots fired near university property, according to officials. More information to come.</a>
-						<p>18 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311678590209110018">BREAKING: This is not a drill. Campus is locked down due to reports of gunfire. Remain indoors until further notice.</a>
-						<p>24 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311681867390795776">BREAKING: A shooting occurred off campus and university police are assisting Oklahoma City police.</a>
-						<p>21 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311682173734367232">BREAKING: Campus was locked down at 10:09 p.m. and is still on lockdown. Please remain indoors until the lockdown ends.</a>
-						<p>9 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311683083025928197">@Tiffanyg89 @stevelackmeyer shots were fired several blocks away, but OCUPD responded to assist OKCPD. More info to come.</a>
-						<p>5 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311685899555598337">BREAKING: The lockdown has NOT been lifted. Please remain indoors.</a>
-						<p>8 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311689021480910849">The lockdown has ended. How and when were you informed of the lockdown? Text? Email? Let us know! #OCUlockdown</a>
-						<p>3 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311690739522367489">Did you get the emergency alerts texts and emails? Let us know how effective the notification system is. #OCUlockdown</a>
-						<p>1 retweets</p>
-					</li>
-				</ul>
-				
-				<!-- social media feed slot two -->
-				<!--
-<ul id="socialmedia">
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311676169198112768">BREAKING: Campus is on lockdown, according to OCUPD. Seek safety indoors.</a>
-						<p>16 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311677146642931712">BREAKING: Shots fired near university property, according to officials. More information to come.</a>
-						<p>18 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311678590209110018">BREAKING: This is not a drill. Campus is locked down due to reports of gunfire. Remain indoors until further notice.</a>
-						<p>24 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311681867390795776">BREAKING: A shooting occurred off campus and university police are assisting Oklahoma City police.</a>
-						<p>21 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311682173734367232">BREAKING: Campus was locked down at 10:09 p.m. and is still on lockdown. Please remain indoors until the lockdown ends.</a>
-						<p>9 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311683083025928197">@Tiffanyg89 @stevelackmeyer shots were fired several blocks away, but OCUPD responded to assist OKCPD. More info to come.</a>
-						<p>5 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311685899555598337">BREAKING: The lockdown has NOT been lifted. Please remain indoors.</a>
-						<p>8 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311689021480910849">The lockdown has ended. How and when were you informed of the lockdown? Text? Email? Let us know! #OCUlockdown</a>
-						<p>3 retweets</p>
-					</li>
-					<li>
-						<a href="https://twitter.com/MediaOCU/status/311690739522367489">Did you get the emergency alerts texts and emails? Let us know how effective the notification system is. #OCUlockdown</a>
-						<p>1 retweets</p>
-					</li>
-				</ul>
--->
+				<a href="http://mediaocu.com/2013/09/09/students-professors-share-opinions-syria/" target="_blank"><div class="item print">Students, professors share opinions on Syria</div></a>
+				<a href="http://mediaocu.com/2013/02/13/administrators-uphold-student-code-of-conduct-in-response-to-gun-control-laws/" target="_blank"><div class="item print">Administrators uphold student code of conduct in response to gun control laws</div></a>
+				<a href="http://mediaocu.com/2013/04/24/university-police-violate-federal-campus-safety-law/" target="_blank"><div class="item print">University police violate federal campus safety law</div></a>
+				<a href="http://mediaocu.com/2013/04/24/university-officials-refuse-prompt-release-of-crime-logs/" target="_blank"><div class="item print">University officials refuse prompt release of crime logs</div></a>
+				<a href="http://mediaocu.com/2013/04/24/university-officials-fail-to-release-annual-crime-statistics/" target="_blank"><div class="item print">University officials fail to release annual crime statistics</div></a>
+				<a href="http://mediaocu.com/2013/04/10/fines-increased-for-parking-violations-new-penalties-added-to-tickets/" target="_blank"><div class="item print">Fine increased for parking violations, new penalties added to tickets</div></a>
+				<a href="http://mediaocu.com/2012/09/23/freshman-student-detained-during-lockdown/" target="_blank"><div class="item print">Freshman student detained during lockdown</div></a>
+				<a href="http://mediaocu.com/2013/03/13/sga-presidential-candidate-disqualified-from-race/" target="_blank"><div class="item print">SGA presidential candidate disqualified from race</div></a>
+				<a href="http://www.news-star.com/article/20130702/NEWS/130709937/1001/"><div class="item print">Lack of fluoride in drinking water causes health concerns</div></a>
+				<a href="http://www.news-star.com/article/20130624/NEWS/130629884"><div class="item print">Public schools pressured to install safe rooms</div></a>
+				<div class="item multimedia"><img src="assets/images/multimedia/multimedia.jpg"></div>
+				<div class="item multimedia"><iframe width="560" height="315" src="//www.youtube.com/embed/M7FIvfx5J10" frameborder="0" allowfullscreen></iframe></div>
+				<div class="item multimedia"><iframe width="560" height="315" src="//www.youtube.com/embed/M7FIvfx5J10" frameborder="0" allowfullscreen></iframe></div>
+				<div class="item multimedia"><iframe width="560" height="315" src="//www.youtube.com/embed/M7FIvfx5J10" frameborder="0" allowfullscreen></iframe></div>
 				
 			</div>
 		
@@ -344,13 +208,6 @@
 
 </footer>
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/lib/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/script.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

@@ -27,6 +27,19 @@ $(document).ready( function() {
 
 
 	if ( $(".homepage").length > 0 ) {
+	
+		$(window).load(function(){
+			$('#isotopecontainer').isotope({
+			  itemSelector : '.item',
+			  sortBy : 'random'
+			});
+		});
+		
+		$('#filteroptions a').click(function(){
+			var selector = $(this).attr('data-filter');
+			$('#isotopecontainer').isotope({ filter: selector });
+			return false;
+		});
 		
 		$(function() {
 		  $('a[href*=#]:not([href=#])').click(function() {

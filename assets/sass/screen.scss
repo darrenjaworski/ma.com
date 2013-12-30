@@ -15,9 +15,7 @@ $grid-padding	:	1em;
 /* End SUSY Grid */
 
 @import "partials/normalize"; 
-@import "partials/utilities"; 
-@import "partials/layout";
-@import "partials/navigation"; 
+@import "partials/utilities";
 
 
 $bluecontrast	:	#304959;
@@ -26,12 +24,17 @@ $footerandwork	:	#0F2D40;
 $gray			:	#ede8df;
 $yellowvisited	:	#CFB705;
 
+$print			:	#21638C;
+$digital		:	#3090CC;
+$pr 			:	#12364D;
+
 @font-face	{
 	font-family: icomoon;
-	src: url('../fonts/icomoon.tff'),
-		url('../fonts/icomoon.eot'),
-		url('../fonts/icomoon.woff'),
-		url('../fonts/icomoon.svg');
+	src: url('../fonts/icomoon.eot');
+	src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.svg') format('svg');
 }
 
 html	{
@@ -110,7 +113,7 @@ nav	{
 	-webkit-margin-before: 0em;
 	-webkit-margin-after: 0em;
 	padding-bottom: 1em;
-	font-size: 2em;
+	font-size: 4em;
 }
 
 #about	{
@@ -185,50 +188,57 @@ nav	{
 	padding: 3em 0em;
 	li {
 		padding-bottom: .5em;
+		display: inline;
 	}
 	h2	{
 		text-align: center;
 	}
+}
+
+.item {
+	padding: 1em;
+	margin: .5em;
+	color: white;
+	//max-width: 30%;
+}
+
+.print {
+	background-color: $print;
+}
+
+.multimedia {
+	background-color: $digital;
+	img {
+		width: 100%;
+	}
+}
+
+.pr {
+	background-color: $pr;
+}
+
+.print, .multimedia, .pr {
+	border-radius: 10px;
+	&:hover {
+		@include single-box-shadow($pr);
+	}
+}
+
+.printbutton {
 	a {
-		@include link-colors($gray, $gray, $gray, $gray, $gray)
+		@include link-colors($print, $print, $print, $print, $print)
 	}
-	.workbox	{
-		@include span-columns(5,12);
-		@include box-shadow(black 0px 0px 15px);
-		@include border-radius(1em);
-		color: $gray;
-		padding: 1em;	
-		margin-bottom: 3em;
-		background-color: $footerandwork;
-		&:nth-child(2n)	{
-			clear: both;
-			@include omega;
-		}
+}
+
+.multimediabutton {
+	a {
+		@include link-colors($digital, $digital, $digital, $digital, $digital)
 	}
-	#work4	{
-		 > button {
-			@include appearance(none);
-			background-color: transparent;
-			border: none;
-			color: $gray;
-		}
-		#socialmedia	{
-			max-height: 13em;
-			overflow: scroll;
-			background-color: $bluecontrast;
-			@include border-radius(1em);
-			> li {
-				padding-left: .2em;
-				padding-right: .2em;
-				> p	{
-					font-size: .5em;
-				}
-				&:last-child	{
-					padding-bottom: .2em;
-				}
-			}
-			padding: .4em;
-		}
+}
+
+.prbutton {
+	a {
+		@include link-colors($pr, $pr, $pr, $pr, $pr)
 	}
 }
 
@@ -347,27 +357,6 @@ footer	{
 			} 
 		}
 	}
-	#work	{
-		.workbox	{
-			@include span-columns(12,12);
-			padding: 0;
-			h2	{
-				padding: .5em;
-			}
-			&:nth-child(2n)	{
-				clear: none;
-				@include remove-omega;
-			}
-			ul	{
-				li {
-					padding: 0em 1em .5em 1em; 
-				}
-			}
-			#work4	{
-				
-			}
-		}
-	}
 	nav	{
 		font-size: .8em;
 	}
@@ -389,3 +378,52 @@ footer	{
 	
 }
 
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
