@@ -393,7 +393,7 @@ table {
 
 @font-face {
   font-family: icomoon;
-  src: url("../fonts/icomoon.tff"), url("../fonts/icomoon.eot"), url("../fonts/icomoon.woff"), url("../fonts/icomoon.svg");
+  src: url("../fonts/icomoon.ttf"), url("../fonts/icomoon.eot"), url("../fonts/icomoon.woff"), url("../fonts/icomoon.svg");
 }
 
 /* line 37, ../sass/screen.scss */
