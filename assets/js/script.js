@@ -30,6 +30,9 @@ $(document).ready( function() {
 	
 		$(window).load(function(){
 			$('#isotopecontainer').isotope({
+			  masonry: {
+			    columnWidth: 120
+			  },
 			  itemSelector : '.item',
 			  sortBy : 'random'
 			});

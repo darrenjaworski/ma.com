@@ -188,10 +188,27 @@ nav	{
 	padding: 3em 0em;
 	li {
 		padding-bottom: .5em;
+		padding-right: .5em;
 		display: inline;
 	}
 	h2	{
 		text-align: center;
+	}
+	.item a {
+		color: white;
+	}
+	.print {
+		max-width: 300px;
+	}
+	.storify {
+		max-width: 30em;
+		max-height: 20em;
+		overflow: auto;
+	}
+	.multimedia iframe {
+		@media (max-width: 732px) {
+			max-width: 100%;
+		}
 	}
 }
 
@@ -199,7 +216,6 @@ nav	{
 	padding: 1em;
 	margin: .5em;
 	color: white;
-	//max-width: 30%;
 }
 
 .print {
@@ -264,11 +280,28 @@ a	{
 	@include link-colors(black, black, black, black, $gray);
 	text-decoration: none;
 }
+
+@mixin gallery-background {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 .main	{
 	.gallery 	{
-		@include span-columns(12,12);
-		margin-top: 3em;
-		@include clearfix;
+		@include gallery-background;
+		h2 {
+			margin-top: 0;
+		}
+		.caption {
+			background: rgba(0,0,0, .6);
+			color: white;
+			position: absolute;
+			bottom: 1em;
+			left: 1em;
+			padding: 1em;
+			max-width: 50%;
+		}
 	}
 	h2	{
 		@include span-columns(12,12);
@@ -370,9 +403,8 @@ footer	{
 		#frontpagetext	{
 			display: block;
 			font-size: .8em;
-		}
-		h2, p	{
-			display: none;
+			@include span-columns(10,12);
+			@include squish(1,1);
 		}
 	}
 	
