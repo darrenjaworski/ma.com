@@ -11,10 +11,10 @@
 $total-columns 	:	12;
 $column-width	:	3em;
 $gutter-width	:	1.5em;
-$grid-padding	:	1em; 
+$grid-padding	:	1em;
 /* End SUSY Grid */
 
-@import "partials/normalize"; 
+@import "partials/normalize";
 @import "partials/utilities";
 
 
@@ -88,7 +88,7 @@ nav	{
 	}
 	.socialnav	{
 		font-family: icomoon;
-		
+
 		@include span-columns(8,12);
 		li {
 			display: inline;
@@ -141,45 +141,26 @@ nav	{
 		}
 		clear: both;
 		@include span-columns(12,12);
-		.stroke {
-		  fill: none;
-		  stroke: #000;
-		  stroke-width: 3px;
-		}
-		
 		.graticule {
 		  fill: none;
 		  stroke: #0F2D40;
 		  stroke-width: .5px;
 		  stroke-opacity: .5;
 		}
-		
-		.fill {
-		  fill: #fff;
-		}
 		.land {
 		  fill: $footerandwork;
+      stroke: white;
+      opacity: .85;
 		}
 		.america	{
 			fill: black;
+      stroke: white;
+      opacity: .9;
 		}
 		.visited	{
 			fill: $yellowvisited;
-		}
-		
-		.boundary {
-		  fill: none;
-		  stroke: #fff;
-		  stroke-width: 1px;
-		}
-		.stroke {
-		  fill: none;
-		  stroke: #000;
-		  stroke-width: 3px;
-		}
-		
-		.fill {
-		  fill: #fff;
+      stroke: white;
+      opacity: .9;
 		}
 	}
 }
@@ -209,6 +190,11 @@ nav	{
 		@media (max-width: 732px) {
 			max-width: 100%;
 		}
+	}
+	.multimedia a {
+		display: block;
+		padding-top: 1em;
+		max-width: 350px;
 	}
 }
 
@@ -305,7 +291,7 @@ a	{
 	}
 	h2	{
 		@include span-columns(12,12);
-		font-size: 2em;	
+		font-size: 2em;
 		@include clearfix;
 		-webkit-margin-before: 0.5em;
 		-webkit-margin-after: 0.5em;
@@ -323,7 +309,7 @@ a	{
 		margin-top: 3em;
 	}
 	#frontpagetext	{
-		 text-align: center; 
+		 text-align: center;
 		 line-height: 1.5em;
 	}
 }
@@ -379,7 +365,7 @@ footer	{
 }
 
 @media (max-width: 732px)	{
-	#socialmedia	{					
+	#socialmedia	{
 		margin-left: 1em;
 		margin-right: 1em;
 	}
@@ -387,7 +373,7 @@ footer	{
 		ul	{
 			li {
 				display: block;
-			} 
+			}
 		}
 	}
 	nav	{
@@ -407,7 +393,7 @@ footer	{
 			@include squish(1,1);
 		}
 	}
-	
+
 }
 
 /**** Isotope Filtering ****/
