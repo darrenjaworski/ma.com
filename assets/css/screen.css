@@ -393,14 +393,20 @@ table {
 
 @font-face {
   font-family: icomoon;
+<<<<<<< HEAD
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.svg") format("svg");
+=======
   src: url("../fonts/icomoon.ttf"), url("../fonts/icomoon.eot"), url("../fonts/icomoon.woff"), url("../fonts/icomoon.svg");
+>>>>>>> master
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 html {
   font-family: 'Helvetica';
 }
 
+<<<<<<< HEAD
 /* line 41, ../sass/screen.scss */
 .ghost {
   position: absolute;
@@ -408,41 +414,68 @@ html {
 }
 
 /* line 45, ../sass/screen.scss */
+=======
+/* line 44, ../sass/screen.scss */
+>>>>>>> dev
 p {
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
   line-height: 1.2em;
 }
 
+<<<<<<< HEAD
 /* line 51, ../sass/screen.scss */
+=======
+/* line 50, ../sass/screen.scss */
+>>>>>>> dev
 section {
   min-height: 20em;
   position: relative;
   top: 3em;
 }
+<<<<<<< HEAD
 /* line 55, ../sass/screen.scss */
+=======
+/* line 54, ../sass/screen.scss */
+>>>>>>> dev
 section:nth-child(2n) {
   background-color: #fdfffe;
 }
 
+<<<<<<< HEAD
 /* line 60, ../sass/screen.scss */
+=======
+/* line 59, ../sass/screen.scss */
+>>>>>>> dev
 ul {
   padding-left: 0;
 }
 
+<<<<<<< HEAD
 /* line 64, ../sass/screen.scss */
+=======
+/* line 63, ../sass/screen.scss */
+>>>>>>> dev
 h2 {
   margin: .5em 0;
 }
 
+<<<<<<< HEAD
 /* line 68, ../sass/screen.scss */
+=======
+/* line 67, ../sass/screen.scss */
+>>>>>>> dev
 .socialnav {
   font-size: 1.5em;
   position: relative;
   top: -.5em;
 }
 
+<<<<<<< HEAD
 /* line 74, ../sass/screen.scss */
+=======
+/* line 73, ../sass/screen.scss */
+>>>>>>> dev
 nav {
   position: fixed;
   z-index: 100;
@@ -454,7 +487,11 @@ nav {
   margin-right: 2.85714%;
   display: inline;
 }
+<<<<<<< HEAD
 /* line 81, ../sass/screen.scss */
+=======
+/* line 80, ../sass/screen.scss */
+>>>>>>> dev
 nav .sitenav {
   width: 31.42857%;
   float: right;
@@ -463,13 +500,21 @@ nav .sitenav {
   display: inline;
   text-align: right;
 }
+<<<<<<< HEAD
 /* line 84, ../sass/screen.scss */
+=======
+/* line 83, ../sass/screen.scss */
+>>>>>>> dev
 nav .sitenav li {
   display: inline;
   padding-left: 1em;
   margin: auto;
 }
+<<<<<<< HEAD
 /* line 90, ../sass/screen.scss */
+=======
+/* line 89, ../sass/screen.scss */
+>>>>>>> dev
 nav .socialnav {
   font-family: icomoon;
   width: 65.71429%;
@@ -477,13 +522,21 @@ nav .socialnav {
   margin-right: 2.85714%;
   display: inline;
 }
+<<<<<<< HEAD
 /* line 94, ../sass/screen.scss */
+=======
+/* line 93, ../sass/screen.scss */
+>>>>>>> dev
 nav .socialnav li {
   display: inline;
   color: #0f2d40;
 }
 
+<<<<<<< HEAD
 /* line 102, ../sass/screen.scss */
+=======
+/* line 101, ../sass/screen.scss */
+>>>>>>> dev
 #homepageimage img {
   width: 100%;
   float: left;
@@ -492,7 +545,11 @@ nav .socialnav li {
   margin-bottom: 5em;
 }
 
+<<<<<<< HEAD
 /* line 108, ../sass/screen.scss */
+=======
+/* line 107, ../sass/screen.scss */
+>>>>>>> dev
 .container {
   *zoom: 1;
   max-width: 52.5em;
@@ -509,32 +566,52 @@ nav .socialnav li {
   clear: both;
 }
 
+<<<<<<< HEAD
 /* line 112, ../sass/screen.scss */
+=======
+/* line 111, ../sass/screen.scss */
+>>>>>>> dev
 .subheading {
   text-align: center;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
   padding-bottom: 1em;
-  font-size: 2em;
+  font-size: 4em;
 }
 
+<<<<<<< HEAD
 /* line 120, ../sass/screen.scss */
 #about {
   padding: 3em 0em;
 }
 /* line 122, ../sass/screen.scss */
+=======
+/* line 119, ../sass/screen.scss */
+#about {
+  padding: 3em 0em;
+}
+/* line 121, ../sass/screen.scss */
+>>>>>>> dev
 #about article {
   width: 65.71429%;
   float: left;
   margin-right: 2.85714%;
   display: inline;
 }
+<<<<<<< HEAD
 /* line 124, ../sass/screen.scss */
+=======
+/* line 123, ../sass/screen.scss */
+>>>>>>> dev
 #about article p {
   padding-bottom: 1em;
   text-indent: 2em;
 }
+<<<<<<< HEAD
 /* line 129, ../sass/screen.scss */
+=======
+/* line 128, ../sass/screen.scss */
+>>>>>>> dev
 #about #trek {
   width: 31.42857%;
   float: right;
@@ -543,12 +620,20 @@ nav .socialnav li {
   display: inline;
   margin-top: 3em;
 }
+<<<<<<< HEAD
 /* line 133, ../sass/screen.scss */
+=======
+/* line 132, ../sass/screen.scss */
+>>>>>>> dev
 #about #trek ul li {
   color: #cfb705;
   padding-left: 1em;
 }
+<<<<<<< HEAD
 /* line 139, ../sass/screen.scss */
+=======
+/* line 138, ../sass/screen.scss */
+>>>>>>> dev
 #about #globe {
   clear: both;
   width: 100%;
@@ -556,7 +641,11 @@ nav .socialnav li {
   margin-right: 2.85714%;
   display: inline;
 }
+<<<<<<< HEAD
 /* line 140, ../sass/screen.scss */
+=======
+/* line 139, ../sass/screen.scss */
+>>>>>>> dev
 #about #globe svg {
   -webkit-border-radius: 10%;
   -moz-border-radius: 10%;
@@ -564,6 +653,7 @@ nav .socialnav li {
   -o-border-radius: 10%;
   border-radius: 10%;
 }
+<<<<<<< HEAD
 /* line 145, ../sass/screen.scss */
 #about #globe .stroke {
   fill: none;
@@ -571,24 +661,40 @@ nav .socialnav li {
   stroke-width: 3px;
 }
 /* line 151, ../sass/screen.scss */
+=======
+/* line 144, ../sass/screen.scss */
+>>>>>>> dev
 #about #globe .graticule {
   fill: none;
   stroke: #0F2D40;
   stroke-width: .5px;
   stroke-opacity: .5;
 }
+<<<<<<< HEAD
 /* line 158, ../sass/screen.scss */
 #about #globe .fill {
   fill: #fff;
 }
 /* line 161, ../sass/screen.scss */
+=======
+/* line 150, ../sass/screen.scss */
+>>>>>>> dev
 #about #globe .land {
   fill: #0f2d40;
+  stroke: white;
+  opacity: .85;
 }
+<<<<<<< HEAD
 /* line 164, ../sass/screen.scss */
+=======
+/* line 155, ../sass/screen.scss */
+>>>>>>> dev
 #about #globe .america {
   fill: black;
+  stroke: white;
+  opacity: .9;
 }
+<<<<<<< HEAD
 /* line 167, ../sass/screen.scss */
 #about #globe .visited {
   fill: #cfb705;
@@ -615,9 +721,26 @@ nav .socialnav li {
   padding: 3em 0em;
 }
 /* line 190, ../sass/screen.scss */
+=======
+/* line 160, ../sass/screen.scss */
+#about #globe .visited {
+  fill: #cfb705;
+  stroke: white;
+  opacity: .9;
+}
+
+/* line 168, ../sass/screen.scss */
+#work {
+  padding: 3em 0em;
+}
+/* line 170, ../sass/screen.scss */
+>>>>>>> dev
 #work li {
   padding-bottom: .5em;
+  padding-right: .5em;
+  display: inline;
 }
+<<<<<<< HEAD
 /* line 193, ../sass/screen.scss */
 #work h2 {
   text-align: center;
@@ -625,23 +748,97 @@ nav .socialnav li {
 /* line 196, ../sass/screen.scss */
 #work a {
   color: #ede8df;
+=======
+/* line 175, ../sass/screen.scss */
+#work h2 {
+  text-align: center;
+}
+/* line 178, ../sass/screen.scss */
+#work .item a {
+  color: white;
+}
+/* line 181, ../sass/screen.scss */
+#work .print {
+  max-width: 300px;
+}
+/* line 184, ../sass/screen.scss */
+#work .storify {
+  max-width: 30em;
+  max-height: 20em;
+  overflow: auto;
+}
+@media (max-width: 732px) {
+  /* line 189, ../sass/screen.scss */
+  #work .multimedia iframe {
+    max-width: 100%;
+  }
+}
+/* line 194, ../sass/screen.scss */
+#work .multimedia a {
+  display: block;
+  padding-top: 1em;
+  max-width: 350px;
+}
+
+/* line 201, ../sass/screen.scss */
+.item {
+  padding: 1em;
+  margin: .5em;
+  color: white;
+}
+
+/* line 207, ../sass/screen.scss */
+.print {
+  background-color: #21638c;
+}
+
+/* line 211, ../sass/screen.scss */
+.multimedia {
+  background-color: #3090cc;
+}
+/* line 213, ../sass/screen.scss */
+.multimedia img {
+  width: 100%;
+}
+
+/* line 218, ../sass/screen.scss */
+.pr {
+  background-color: #12364d;
+}
+
+/* line 222, ../sass/screen.scss */
+.print, .multimedia, .pr {
+  border-radius: 10px;
+}
+/* line 224, ../sass/screen.scss */
+.print:hover, .multimedia:hover, .pr:hover {
+  -webkit-box-shadow: 0px 0px 5px #12364d;
+  -moz-box-shadow: 0px 0px 5px #12364d;
+  box-shadow: 0px 0px 5px #12364d;
+}
+
+/* line 230, ../sass/screen.scss */
+.printbutton a {
+  color: #21638c;
+>>>>>>> dev
 }
 /* line 18, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-#work a:visited {
-  color: #ede8df;
+.printbutton a:visited {
+  color: #21638c;
 }
 /* line 21, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-#work a:focus {
-  color: #ede8df;
+.printbutton a:focus {
+  color: #21638c;
 }
 /* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-#work a:hover {
-  color: #ede8df;
+.printbutton a:hover {
+  color: #21638c;
 }
 /* line 27, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-#work a:active {
-  color: #ede8df;
+.printbutton a:active {
+  color: #21638c;
 }
+<<<<<<< HEAD
 /* line 199, ../sass/screen.scss */
 #work .workbox {
   width: 40%;
@@ -709,6 +906,56 @@ nav .socialnav li {
   padding-top: 3em;
 }
 /* line 241, ../sass/screen.scss */
+=======
+
+/* line 236, ../sass/screen.scss */
+.multimediabutton a {
+  color: #3090cc;
+}
+/* line 18, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.multimediabutton a:visited {
+  color: #3090cc;
+}
+/* line 21, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.multimediabutton a:focus {
+  color: #3090cc;
+}
+/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.multimediabutton a:hover {
+  color: #3090cc;
+}
+/* line 27, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.multimediabutton a:active {
+  color: #3090cc;
+}
+
+/* line 242, ../sass/screen.scss */
+.prbutton a {
+  color: #12364d;
+}
+/* line 18, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.prbutton a:visited {
+  color: #12364d;
+}
+/* line 21, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.prbutton a:focus {
+  color: #12364d;
+}
+/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.prbutton a:hover {
+  color: #12364d;
+}
+/* line 27, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.prbutton a:active {
+  color: #12364d;
+}
+
+/* line 248, ../sass/screen.scss */
+#madibio #biopic {
+  padding-top: 3em;
+}
+/* line 249, ../sass/screen.scss */
+>>>>>>> dev
 #madibio #biopic img {
   width: 82.85714%;
   float: left;
@@ -718,17 +965,29 @@ nav .socialnav li {
   margin-right: 8.57143%;
   padding-bottom: 3em;
 }
+<<<<<<< HEAD
 /* line 248, ../sass/screen.scss */
+=======
+/* line 256, ../sass/screen.scss */
+>>>>>>> dev
 #madibio p {
   padding-bottom: 1em;
   text-indent: 2em;
 }
+<<<<<<< HEAD
 /* line 252, ../sass/screen.scss */
+=======
+/* line 260, ../sass/screen.scss */
+>>>>>>> dev
 #madibio article {
   padding-bottom: 3em;
 }
 
+<<<<<<< HEAD
 /* line 257, ../sass/screen.scss */
+=======
+/* line 265, ../sass/screen.scss */
+>>>>>>> dev
 a {
   color: black;
   text-decoration: none;
@@ -750,28 +1009,35 @@ a:active {
   color: black;
 }
 
+<<<<<<< HEAD
 /* line 262, ../sass/screen.scss */
+=======
+/* line 277, ../sass/screen.scss */
+>>>>>>> dev
 .main .gallery {
-  width: 100%;
-  float: left;
-  margin-right: 2.85714%;
-  display: inline;
-  margin-top: 3em;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-/* line 20, ../sass/partials/_utilities.scss */
-.main .gallery:before, .main .gallery:after {
-  content: " ";
-  display: table;
+/* line 279, ../sass/screen.scss */
+.main .gallery h2 {
+  margin-top: 0;
 }
-/* line 24, ../sass/partials/_utilities.scss */
-.main .gallery:after {
-  clear: both;
+/* line 282, ../sass/screen.scss */
+.main .gallery .caption {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  padding: 1em;
+  max-width: 50%;
 }
-/* line 27, ../sass/partials/_utilities.scss */
-.main .gallery {
-  *zoom: 1;
-}
+<<<<<<< HEAD
 /* line 267, ../sass/screen.scss */
+=======
+/* line 292, ../sass/screen.scss */
+>>>>>>> dev
 .main h2 {
   width: 100%;
   float: left;
@@ -794,7 +1060,11 @@ a:active {
 .main h2 {
   *zoom: 1;
 }
+<<<<<<< HEAD
 /* line 274, ../sass/screen.scss */
+=======
+/* line 299, ../sass/screen.scss */
+>>>>>>> dev
 .main p {
   width: 100%;
   float: left;
@@ -814,7 +1084,11 @@ a:active {
 .main p {
   *zoom: 1;
 }
+<<<<<<< HEAD
 /* line 278, ../sass/screen.scss */
+=======
+/* line 303, ../sass/screen.scss */
+>>>>>>> dev
 .main h1 {
   width: 100%;
   float: left;
@@ -838,13 +1112,21 @@ a:active {
 .main h1 {
   *zoom: 1;
 }
+<<<<<<< HEAD
 /* line 286, ../sass/screen.scss */
+=======
+/* line 311, ../sass/screen.scss */
+>>>>>>> dev
 .main #frontpagetext {
   text-align: center;
   line-height: 1.5em;
 }
 
+<<<<<<< HEAD
 /* line 292, ../sass/screen.scss */
+=======
+/* line 317, ../sass/screen.scss */
+>>>>>>> dev
 footer {
   color: #ede8df;
   min-height: 10em;
@@ -852,14 +1134,22 @@ footer {
   top: 3em;
   background-color: #0f2d40;
 }
+<<<<<<< HEAD
 /* line 298, ../sass/screen.scss */
+=======
+/* line 323, ../sass/screen.scss */
+>>>>>>> dev
 footer #footerleft {
   width: 48.57143%;
   float: left;
   margin-right: 2.85714%;
   display: inline;
 }
+<<<<<<< HEAD
 /* line 301, ../sass/screen.scss */
+=======
+/* line 326, ../sass/screen.scss */
+>>>>>>> dev
 footer #footerright {
   float: right;
   margin-right: 0;
@@ -867,21 +1157,37 @@ footer #footerright {
   display: inline;
   font-family: icomoon;
 }
+<<<<<<< HEAD
 /* line 305, ../sass/screen.scss */
 footer .socialnav {
   top: -1.75em;
 }
 /* line 308, ../sass/screen.scss */
+=======
+/* line 330, ../sass/screen.scss */
+footer .socialnav {
+  top: -1.75em;
+}
+/* line 333, ../sass/screen.scss */
+>>>>>>> dev
 footer ul {
   padding-top: 5em;
   margin: 0;
 }
+<<<<<<< HEAD
 /* line 310, ../sass/screen.scss */
+=======
+/* line 335, ../sass/screen.scss */
+>>>>>>> dev
 footer ul li {
   display: inline;
   padding-right: .5em;
 }
+<<<<<<< HEAD
 /* line 316, ../sass/screen.scss */
+=======
+/* line 341, ../sass/screen.scss */
+>>>>>>> dev
 footer a {
   color: #ede8df;
 }
@@ -903,14 +1209,22 @@ footer a:active {
 }
 
 @media (max-width: 860px) {
+<<<<<<< HEAD
   /* line 323, ../sass/screen.scss */
+=======
+  /* line 348, ../sass/screen.scss */
+>>>>>>> dev
   #about article {
     width: 100%;
     float: left;
     margin-right: 2.85714%;
     display: inline;
   }
+<<<<<<< HEAD
   /* line 326, ../sass/screen.scss */
+=======
+  /* line 351, ../sass/screen.scss */
+>>>>>>> dev
   #about #trek {
     width: 100%;
     float: left;
@@ -921,7 +1235,11 @@ footer a:active {
     *margin-left: auto;
   }
 
+<<<<<<< HEAD
   /* line 332, ../sass/screen.scss */
+=======
+  /* line 357, ../sass/screen.scss */
+>>>>>>> dev
   nav .sitenav {
     width: 57.14286%;
     float: left;
@@ -932,7 +1250,11 @@ footer a:active {
     *margin-left: -1.5em;
     display: inline;
   }
+<<<<<<< HEAD
   /* line 336, ../sass/screen.scss */
+=======
+  /* line 361, ../sass/screen.scss */
+>>>>>>> dev
   nav .socialnav {
     width: 40%;
     float: left;
@@ -941,17 +1263,26 @@ footer a:active {
   }
 }
 @media (max-width: 732px) {
+<<<<<<< HEAD
   /* line 343, ../sass/screen.scss */
+=======
+  /* line 368, ../sass/screen.scss */
+>>>>>>> dev
   #socialmedia {
     margin-left: 1em;
     margin-right: 1em;
   }
 
+<<<<<<< HEAD
   /* line 349, ../sass/screen.scss */
+=======
+  /* line 374, ../sass/screen.scss */
+>>>>>>> dev
   #footerleft ul li {
     display: block;
   }
 
+<<<<<<< HEAD
   /* line 355, ../sass/screen.scss */
   #work .workbox {
     width: 100%;
@@ -977,28 +1308,104 @@ footer a:active {
   }
 
   /* line 375, ../sass/screen.scss */
+=======
+  /* line 379, ../sass/screen.scss */
+>>>>>>> dev
   nav {
     font-size: .8em;
   }
 
+<<<<<<< HEAD
   /* line 379, ../sass/screen.scss */
+=======
+  /* line 383, ../sass/screen.scss */
+>>>>>>> dev
   .main .gallery {
     width: 100%;
     float: left;
     margin-right: 2.85714%;
     display: inline;
   }
+<<<<<<< HEAD
   /* line 382, ../sass/screen.scss */
   .main h1 {
     font-size: 2em;
   }
   /* line 385, ../sass/screen.scss */
+=======
+  /* line 386, ../sass/screen.scss */
+  .main h1 {
+    font-size: 2em;
+  }
+  /* line 389, ../sass/screen.scss */
+>>>>>>> dev
   .main #frontpagetext {
     display: block;
     font-size: .8em;
+    width: 82.85714%;
+    float: left;
+    margin-right: 2.85714%;
+    display: inline;
+    margin-left: 8.57143%;
+    margin-right: 8.57143%;
   }
+<<<<<<< HEAD
   /* line 389, ../sass/screen.scss */
   .main h2, .main p {
     display: none;
   }
+=======
+}
+/**** Isotope Filtering ****/
+/* line 401, ../sass/screen.scss */
+.isotope-item {
+  z-index: 2;
+}
+
+/* line 405, ../sass/screen.scss */
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+/* line 413, ../sass/screen.scss */
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+
+/* line 421, ../sass/screen.scss */
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+
+/* line 429, ../sass/screen.scss */
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+/* line 441, ../sass/screen.scss */
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
+>>>>>>> dev
 }

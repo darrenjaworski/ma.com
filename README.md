@@ -1,6 +1,4 @@
-Madi Alexander - personal site
+site-start
 ==========
 
-*Map is now responsive. Although it's slow and needs optimization.
-
-Built using the <a href="https://github.com/kotyy/site-start">site start</a>. As with <a href="http://darrenjaworski.com">darrenjaworski.com</a> the d3 visualizations need to resize for smaller browsers. I also want to build out a back end so that Madi can change the content herself.
+A boilerplate for website that includes HTML5 Boilerplate, normalize.css, Susy Grid, SASS, Compass and a few custom mixins and javascript snippets.

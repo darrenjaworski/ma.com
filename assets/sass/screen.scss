@@ -11,13 +11,11 @@
 $total-columns 	:	12;
 $column-width	:	3em;
 $gutter-width	:	1.5em;
-$grid-padding	:	1em; 
+$grid-padding	:	1em;
 /* End SUSY Grid */
 
-@import "partials/normalize"; 
-@import "partials/utilities"; 
-@import "partials/layout";
-@import "partials/navigation"; 
+@import "partials/normalize";
+@import "partials/utilities";
 
 
 $bluecontrast	:	#304959;
@@ -26,12 +24,24 @@ $footerandwork	:	#0F2D40;
 $gray			:	#ede8df;
 $yellowvisited	:	#CFB705;
 
+$print			:	#21638C;
+$digital		:	#3090CC;
+$pr 			:	#12364D;
+
 @font-face	{
 	font-family: icomoon;
+<<<<<<< HEAD
+	src: url('../fonts/icomoon.eot');
+	src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.svg') format('svg');
+=======
 	src: url('../fonts/icomoon.ttf'),
 		url('../fonts/icomoon.eot'),
 		url('../fonts/icomoon.woff'),
 		url('../fonts/icomoon.svg');
+>>>>>>> master
 }
 
 html	{
@@ -89,7 +99,7 @@ nav	{
 	}
 	.socialnav	{
 		font-family: icomoon;
-		
+
 		@include span-columns(8,12);
 		li {
 			display: inline;
@@ -114,7 +124,7 @@ nav	{
 	-webkit-margin-before: 0em;
 	-webkit-margin-after: 0em;
 	padding-bottom: 1em;
-	font-size: 2em;
+	font-size: 4em;
 }
 
 #about	{
@@ -142,45 +152,26 @@ nav	{
 		}
 		clear: both;
 		@include span-columns(12,12);
-		.stroke {
-		  fill: none;
-		  stroke: #000;
-		  stroke-width: 3px;
-		}
-		
 		.graticule {
 		  fill: none;
 		  stroke: #0F2D40;
 		  stroke-width: .5px;
 		  stroke-opacity: .5;
 		}
-		
-		.fill {
-		  fill: #fff;
-		}
 		.land {
 		  fill: $footerandwork;
+      stroke: white;
+      opacity: .85;
 		}
 		.america	{
 			fill: black;
+      stroke: white;
+      opacity: .9;
 		}
 		.visited	{
 			fill: $yellowvisited;
-		}
-		
-		.boundary {
-		  fill: none;
-		  stroke: #fff;
-		  stroke-width: 1px;
-		}
-		.stroke {
-		  fill: none;
-		  stroke: #000;
-		  stroke-width: 3px;
-		}
-		
-		.fill {
-		  fill: #fff;
+      stroke: white;
+      opacity: .9;
 		}
 	}
 }
@@ -189,50 +180,78 @@ nav	{
 	padding: 3em 0em;
 	li {
 		padding-bottom: .5em;
+		padding-right: .5em;
+		display: inline;
 	}
 	h2	{
 		text-align: center;
 	}
+	.item a {
+		color: white;
+	}
+	.print {
+		max-width: 300px;
+	}
+	.storify {
+		max-width: 30em;
+		max-height: 20em;
+		overflow: auto;
+	}
+	.multimedia iframe {
+		@media (max-width: 732px) {
+			max-width: 100%;
+		}
+	}
+	.multimedia a {
+		display: block;
+		padding-top: 1em;
+		max-width: 350px;
+	}
+}
+
+.item {
+	padding: 1em;
+	margin: .5em;
+	color: white;
+}
+
+.print {
+	background-color: $print;
+}
+
+.multimedia {
+	background-color: $digital;
+	img {
+		width: 100%;
+	}
+}
+
+.pr {
+	background-color: $pr;
+}
+
+.print, .multimedia, .pr {
+	border-radius: 10px;
+	&:hover {
+		@include single-box-shadow($pr);
+	}
+}
+
+.printbutton {
 	a {
-		@include link-colors($gray, $gray, $gray, $gray, $gray)
+		@include link-colors($print, $print, $print, $print, $print)
 	}
-	.workbox	{
-		@include span-columns(5,12);
-		@include box-shadow(black 0px 0px 15px);
-		@include border-radius(1em);
-		color: $gray;
-		padding: 1em;	
-		margin-bottom: 3em;
-		background-color: $footerandwork;
-		&:nth-child(2n)	{
-			clear: both;
-			@include omega;
-		}
+}
+
+.multimediabutton {
+	a {
+		@include link-colors($digital, $digital, $digital, $digital, $digital)
 	}
-	#work4	{
-		 > button {
-			@include appearance(none);
-			background-color: transparent;
-			border: none;
-			color: $gray;
-		}
-		#socialmedia	{
-			max-height: 13em;
-			overflow: scroll;
-			background-color: $bluecontrast;
-			@include border-radius(1em);
-			> li {
-				padding-left: .2em;
-				padding-right: .2em;
-				> p	{
-					font-size: .5em;
-				}
-				&:last-child	{
-					padding-bottom: .2em;
-				}
-			}
-			padding: .4em;
-		}
+}
+
+.prbutton {
+	a {
+		@include link-colors($pr, $pr, $pr, $pr, $pr)
 	}
 }
 
@@ -258,15 +277,32 @@ a	{
 	@include link-colors(black, black, black, black, $gray);
 	text-decoration: none;
 }
+
+@mixin gallery-background {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 .main	{
 	.gallery 	{
-		@include span-columns(12,12);
-		margin-top: 3em;
-		@include clearfix;
+		@include gallery-background;
+		h2 {
+			margin-top: 0;
+		}
+		.caption {
+			background: rgba(0,0,0, .6);
+			color: white;
+			position: absolute;
+			bottom: 1em;
+			left: 1em;
+			padding: 1em;
+			max-width: 50%;
+		}
 	}
 	h2	{
 		@include span-columns(12,12);
-		font-size: 2em;	
+		font-size: 2em;
 		@include clearfix;
 		-webkit-margin-before: 0.5em;
 		-webkit-margin-after: 0.5em;
@@ -284,7 +320,7 @@ a	{
 		margin-top: 3em;
 	}
 	#frontpagetext	{
-		 text-align: center; 
+		 text-align: center;
 		 line-height: 1.5em;
 	}
 }
@@ -340,7 +376,7 @@ footer	{
 }
 
 @media (max-width: 732px)	{
-	#socialmedia	{					
+	#socialmedia	{
 		margin-left: 1em;
 		margin-right: 1em;
 	}
@@ -348,27 +384,6 @@ footer	{
 		ul	{
 			li {
 				display: block;
-			} 
-		}
-	}
-	#work	{
-		.workbox	{
-			@include span-columns(12,12);
-			padding: 0;
-			h2	{
-				padding: .5em;
-			}
-			&:nth-child(2n)	{
-				clear: none;
-				@include remove-omega;
-			}
-			ul	{
-				li {
-					padding: 0em 1em .5em 1em; 
-				}
-			}
-			#work4	{
-				
 			}
 		}
 	}
@@ -385,11 +400,59 @@ footer	{
 		#frontpagetext	{
 			display: block;
 			font-size: .8em;
-		}
-		h2, p	{
-			display: none;
+			@include span-columns(10,12);
+			@include squish(1,1);
 		}
 	}
-	
+
 }
 
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
