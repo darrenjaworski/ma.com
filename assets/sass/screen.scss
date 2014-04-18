@@ -38,6 +38,10 @@ html	{
 	font-family: 'Helvetica';
 }
 
+.ghost {
+	@include accessible_hidden;
+}
+
 p	{
 	-webkit-margin-before: 0em;
 	-webkit-margin-after: 0em;
